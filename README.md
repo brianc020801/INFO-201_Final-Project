@@ -1,3 +1,15 @@
 # final-project-starter
 
 This is where you will create your Github repo for your final project. Instructions are on Canvas!
+
+Where did you download the data (e.g., a web URL)?
+https://www.kaggle.com/shivamb/netflix-shows
+
+How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+Data was 
+
+How many observations (rows) are in your data?
+
+How many features (columns) are in the data?
+
+What questions (from above) can be answered using the data in this dataset?
