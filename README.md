@@ -13,7 +13,7 @@ We are interested in this topic because we wanted to find a modern topic that wa
 3. What tv shows/ movies were chosen to be on Netflix, Hulu, Prime Video, Disney+ at the same time?
 4. What differences are between Rotten Tomatoes rating and IMDB rating?
 	+ Example: Same movie but has high Rotten tomatoes rating but low IMDB rating  
-## Where did you download the data (e.g., a web URL)? 
+### Where did you download the data (e.g., a web URL)? 
 * [Amazon Prime Movies & TV Shows](https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows)
 * [Netflix Movies & TV Shows](https://www.kaggle.com/shivamb/netflix-shows)
 * [Hulu Movies & TV Shows](https://www.kaggle.com/shivamb/hulu-movies-and-tv-shows)
@@ -22,7 +22,7 @@ We are interested in this topic because we wanted to find a modern topic that wa
 ### How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about? 
 The first three dataset was collected by *Shivam Bansal* which are about listings of all the movies and tv shows available on Netflix/Prime Videos/ Hulu along with details such as - cast, directors, ratings, release year, duration, etc.
 The last two dataset was collected by *Ruchi Batia* which is a collection of movies(dataset 1) and tv-shows(dataset 2) found on Amazon Prime, Hulu, Netflix, Disney+
- ### Dataset Details 
+### Dataset Details 
 * Amazon Prime
 	+ 9668 Rows
 	+ 12 Columns
