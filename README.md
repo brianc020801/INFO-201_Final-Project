@@ -12,13 +12,13 @@ What data-driven questions do you hope to answer about this domain (share at lea
 2. Which year(the year that the movie was released) has the most movies on the streaming services?
 3. What tv shows/ movies were chosen to be on Netflix, Hulu, Prime Video, Disney+ at the same time?
 4. What differences are between Rotten Tomatoes rating and IMDB rating?
-  + Example: Same movie but has high Rotten tomatoes rating but low IMDB rating
+  + Example: Same movie but has high Rotten tomatoes rating but low IMDB rating  
 Where did you download the data (e.g., a web URL)? 
-* [Amazon Prime Movies & TV Shows] (https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows)
+* [Amazon Prime Movies & TV Shows](https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows)
 * [Netflix Movies & TV Shows](https://www.kaggle.com/shivamb/netflix-shows)
 * [Hulu Movies & TV Shows](https://www.kaggle.com/shivamb/hulu-movies-and-tv-shows)
 * [Movies on Netflix, Prime Video, Hulu and Disney+](https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney)
-* [TV shows on Netflix, Prime Video, Hulu and Disney+](https://www.kaggle.com/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney)
+* [TV shows on Netflix, Prime Video, Hulu and Disney+](https://www.kaggle.com/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney)  
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about? 
 The first three dataset was collected by *Shivam Bansal* which are about listings of all the movies and tv shows available on Netflix/Prime Videos/ Hulu along with details such as - cast, directors, ratings, release year, duration, etc.
 The last two dataset was collected by *Ruchi Batia* which is a collection of movies(dataset 1) and tv-shows(dataset 2) found on Amazon Prime, Hulu, Netflix, Disney+
