@@ -1,6 +1,6 @@
 # Movies/TV-Shows Data Analysis
 
-Why are you interested in this field/domain?  
+### Why are you interested in this field/domain?  
 We are interested in this topic because we wanted to find a modern topic that was relevant to our daily lives and ask questions that could be inspired from our time spent streaming.
 ### What other examples of data driven project have you found related to this domain (share at least 3)?
 * [TV Shows Analysis: Netflix, Prime Video, Hulu and Disney](https://www.analyticsvidhya.com/blog/2021/06/tv-shows-analysis-netflix-prime-video-hulu-and-disney/)
