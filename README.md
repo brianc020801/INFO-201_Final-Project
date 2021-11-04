@@ -1,6 +1,5 @@
 # Movies/TV-Shows Data Analysis
 
-This is where you will create your Github repo for your final project. Instructions are on Canvas!
 Why are you interested in this field/domain?
 We are interested in this topic because we wanted to find a modern topic that was relevant to our daily lives and ask questions that could be inspired from our time spent streaming.
 ### What other examples of data driven project have you found related to this domain (share at least 3)?
