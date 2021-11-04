@@ -5,7 +5,7 @@ Why are you interested in this field/domain?
 We are interested in this topic because we wanted to find a modern topic that was relevant to our daily lives and ask questions that could be inspired from our time spent streaming.
 What other examples of data driven project have you found related to this domain (share at least 3)?
 * [TV Shows Analysis: Netflix, Prime Video, Hulu and Disney](https://www.analyticsvidhya.com/blog/2021/06/tv-shows-analysis-netflix-prime-video-hulu-and-disney/)
-* [Netflix Movies and TV Shows — Exploratory Data Analysis (EDA)]https://medium.com/analytics-vidhya/netflix-movies-and-tvshows-exploratory-data-analysis-eda-and-visualization-using-python-80753fcfcf7
+* [Netflix Movies and TV Shows — Exploratory Data Analysis (EDA)](https://medium.com/analytics-vidhya/netflix-movies-and-tvshows-exploratory-data-analysis-eda-and-visualization-using-python-80753fcfcf7)
 * [Exploratory Data Analysis With Movies]https://towardsdatascience.com/exploratory-data-analysis-with-movies-3f32a4c3f2f3
 What data-driven questions do you hope to answer about this domain (share at least 3)?
 1. Which country produces the most tv shows/ movies? 
@@ -28,17 +28,17 @@ What questions (from above) can be answered using the data in this dataset?
  
  
 * Amazon Prime
-+ 9668 Rows
-+ 12 Columns
-+ Questions 1-2
+	+ 9668 Rows
+	+ 12 Columns
+	+ Questions 1-2
 * Netflix
-+ 8807 Rows
-+ 12 Columns
-+ Questions 1-2
+	+ 8807 Rows
+	+ 12 Columns
+	+ Questions 1-2
 * Hulu
 	+ 3073 Rows
-+ 12 Columns
-+ Questions 1-2
+	+ 12 Columns
+	+ Questions 1-2
 * All-in-one (Movies)
 	+ 9515 Rows
 	+ 17 Columns
