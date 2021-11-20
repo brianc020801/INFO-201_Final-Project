@@ -9,5 +9,17 @@ Our summary information function calculated having 9515 movies in the dataset. T
 sum <- answer_list(streaming_data)
 
 ### Summary Table
-```{r echo = FALSE
+
+```{r echo = FALSE}```
 df <- data_movies_df(data_df)
+
+### Charts
+
+Chart1 - Compares the rotten tomatoes ratings between Netflix, Prime Video, and Hulu.
+
+Chart2 - Compares the years of movies between Netflix, Prime Video, and Hulu.
+
+Chart3 - Compares the amount of movies on each platform. 
+
+
+
