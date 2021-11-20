@@ -43,4 +43,9 @@ The last two dataset was collected by *Ruchi Batia* which is a collection of mov
 	+ 12 Columns
 	+ Questions 1-4
  
+ 
+ Summary Information Script
+ 
+There were 9515 rows in this dataset and each row contained a movie so that means that this dataset had 9515 movies. The United States had the most movies made in this data set with them making 4650 movies and this is not counting movies that had multiple locations that may include the United States. The country that had the least movies made or tied with least made is one made in Afghanistan and the United States. Only 7 movies decided to be on Netflix, Hulu, and Amazon Prime. Jingle Pols had the highest rating difference between Rotten Tomatoes and IMDb which had a 52 point difference. A movie that ties for the least amount of difference between Rotten Tomatoes and IMDb is I Wish I Was Here with a difference of 0.
+
 
