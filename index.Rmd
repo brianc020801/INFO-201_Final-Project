@@ -4,6 +4,10 @@ Our group project takes a look at the movies domain. We want to explore various 
 
 ### Summary Paragraph
 
-### Summary Table
+Our summary information function calculated having 9515 movies in the dataset. The United States produced 4650 movies (highest country) and Afghanistan has the least number of movies produced. 2019 had the most movies made in the year with 1014 movies. 1914 was the least with 1 movie. There are only 7 movies on all streaming platforms. Lastly, the highest difference between rotten tomatoes and IMDB's ratings was Jingle Pols (52%) and the lowest was I wish I was Here (same rating). 
 
+sum <- answer_list(streaming_data)
+
+### Summary Table
+```{r echo = FALSE
 df <- data_movies_df(data_df)
