@@ -1,0 +1,9 @@
+### Introduction
+
+Our group project takes a look at the movies domain. We want to explore various datasets, looking for whihc countries produce the most movies, which years had the most movies released, how many movies are on the different streaming services at the same time, and the differences between IMDB and rotten tomatoes ratings. These data points will help us understand more on various streaming services and movie production.
+
+### Summary Paragraph
+
+### Summary Table
+
+df <- data_movies_df(data_df)
