@@ -1,17 +1,20 @@
+library(tidyverse)
+
 #loads the data file into a dataframe
 data_df <- read.csv("data/MoviesOnStreamingPlatforms_updated.csv")
 
 #Mutates the rating rows into data types that are easy for calculations
 data_df <- data_df %>% 
-  mutate(IMDb = as.double(substr(na.omit(IMDb), 0, 3)), Rotten.Tomatoes = as.double(substr(na.omit(Rotten.Tomatoes), 0, 2)))
+  mutate(IMDb = as.numeric(substr(na.omit(IMDb), 0, 3)), Rotten.Tomatoes = as.numeric(substr(na.omit(Rotten.Tomatoes), 0, 2)))
+
 
 #Groups the data by movies that are on Netflix and summaries the data
 data_netflix_df <- data_df %>%
   group_by(Netflix) %>%
   summarise(Provider = "Netflix", 
-            Avg_IMDb = mean(na.omit(IMDb)), 
-            Avg_Rotten_Tomatoes = mean(na.omit(Rotten.Tomatoes)), 
-            Avg_Runtime = mean(na.omit(Runtime)), 
+            Avg_IMDb = round(as.numeric(mean(na.omit(IMDb))), 1), 
+            Avg_Rotten_Tomatoes = round(as.numeric(mean(na.omit(Rotten.Tomatoes)))), 
+            Avg_Runtime = round(as.numeric(mean(na.omit(Runtime))), 2),  
             Total_Movies = n()) %>%
   filter(Netflix == 1) %>% 
   select(Provider, Total_Movies, Avg_IMDb, Avg_Rotten_Tomatoes, Avg_Runtime)
@@ -20,9 +23,9 @@ data_netflix_df <- data_df %>%
 data_amazon_df <- data_df %>%
   group_by(Prime.Video) %>%
   summarise(Provider = "Amazon", 
-            Avg_IMDb = mean(na.omit(IMDb)), 
-            Avg_Rotten_Tomatoes = mean(na.omit(Rotten.Tomatoes)), 
-            Avg_Runtime = mean(na.omit(Runtime)), 
+            Avg_IMDb = round(as.numeric(mean(na.omit(IMDb))), 1), 
+            Avg_Rotten_Tomatoes = round(as.numeric(mean(na.omit(Rotten.Tomatoes)))), 
+            Avg_Runtime = round(as.numeric(mean(na.omit(Runtime))), 2),   
             Total_Movies = n()) %>%
   filter(Prime.Video == 1) %>% 
   select(Provider, Total_Movies, Avg_IMDb, Avg_Rotten_Tomatoes, Avg_Runtime)
@@ -31,9 +34,9 @@ data_amazon_df <- data_df %>%
 data_hulu_df <- data_df %>%
   group_by(Hulu) %>%
   summarise(Provider = "Hulu", 
-            Avg_IMDb = mean(na.omit(IMDb)), 
-            Avg_Rotten_Tomatoes = mean(na.omit(Rotten.Tomatoes)), 
-            Avg_Runtime = mean(na.omit(Runtime)), 
+            Avg_IMDb = round(as.numeric(mean(na.omit(IMDb))), 1), 
+            Avg_Rotten_Tomatoes = round(as.numeric(mean(na.omit(Rotten.Tomatoes)))), 
+            Avg_Runtime = round(as.numeric(mean(na.omit(Runtime))), 2),  
             Total_Movies = n()) %>%
   filter(Hulu == 1) %>% 
   select(Provider, Total_Movies, Avg_IMDb, Avg_Rotten_Tomatoes, Avg_Runtime)
@@ -42,9 +45,9 @@ data_hulu_df <- data_df %>%
 data_disney_df <- data_df %>%
   group_by(Disney.) %>%
   summarise(Provider = "Disney", 
-            Avg_IMDb = mean(na.omit(IMDb)), 
-            Avg_Rotten_Tomatoes = mean(na.omit(Rotten.Tomatoes)), 
-            Avg_Runtime = mean(na.omit(Runtime)), 
+            Avg_IMDb = round(as.numeric(mean(na.omit(IMDb))), 1), 
+            Avg_Rotten_Tomatoes = round(as.numeric(mean(na.omit(Rotten.Tomatoes)))), 
+            Avg_Runtime = round(as.numeric(mean(na.omit(Runtime))), 2),  
             Total_Movies = n()) %>%
   filter(Disney. == 1) %>% 
   select(Provider, Total_Movies, Avg_IMDb, Avg_Rotten_Tomatoes, Avg_Runtime)
