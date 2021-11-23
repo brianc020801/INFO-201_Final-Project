@@ -1,3 +1,23 @@
+---
+title: "Movies on Streaming Services"
+author: "Team 39"
+date: "11/21/2021"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include = FALSE}
+library("knitr")
+source("table.R")
+source("chart1.R")
+source("chart2.R")
+source("chart3.R")
+source("Summary Information Script.R")
+```
+
 ### Introduction
 
 Our group project takes a look at the movies domain. We want to explore various datasets, looking for whihc countries produce the most movies, which years had the most movies released, how many movies are on the different streaming services at the same time, and the differences between IMDB and rotten tomatoes ratings. These data points will help us understand more on various streaming services and movie production.
@@ -6,20 +26,30 @@ Our group project takes a look at the movies domain. We want to explore various 
 
 Our summary information function calculated having 9515 movies in the dataset. The United States produced 4650 movies (highest country) and Afghanistan has the least number of movies produced. 2019 had the most movies made in the year with 1014 movies. 1914 was the least with 1 movie. There are only 7 movies on all streaming platforms. Lastly, the highest difference between rotten tomatoes and IMDB's ratings was Jingle Pols (52%) and the lowest was I wish I was Here (same rating). 
 
-sum <- answer_list(streaming_data)
+
+```{r echo = FALSE}
+answer_list()
+```
 
 ### Summary Table
 
-```{r echo = FALSE}```
-df <- data_movies_df(data_df)
+```{r echo = FALSE}
+create_table()
+```
 
 ### Charts
 
-Chart1 - Compares the rotten tomatoes ratings between Netflix, Prime Video, and Hulu.
-
-Chart2 - Compares the years of movies between Netflix, Prime Video, and Hulu.
-
-Chart3 - Compares the amount of movies on each platform. 
+```{r echo = FALSE}
+create_chart_1()
+```
 
 
+```{r echo = FALSE}
+create_chart_2()
+```
+
+
+```{r echo = FALSE}
+create_chart_3()
+```
 

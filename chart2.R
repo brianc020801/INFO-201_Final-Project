@@ -31,7 +31,8 @@ onlyHulu <- data_df %>%
 
 combined <- rbind.data.frame(onlyHulu,onlyNetflix,onlyPrime)
 
-ggplot(combined, aes(Platform, Year))+
-  geom_boxplot()+
-  labs(title = "Box plot of the years of the movies on each platform")
-
+create_chart_2 <- function(){
+  ggplot(combined, aes(Platform, Year))+
+    geom_boxplot()+
+    labs(title = "Box plot of the years of the movies on each platform")
+}

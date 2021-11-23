@@ -1,7 +1,6 @@
 library(dplyr)
 library(stringr)
-streaming_data <- read.csv("Documents/Info201/final-project/data/MoviesOnStreamingPlatforms_updated.csv")
-View(streaming_data)
+streaming_data <- read.csv("data/MoviesOnStreamingPlatforms_updated.csv")
 
 
 num_observations <- nrow(streaming_data)
@@ -30,7 +29,7 @@ streaming_data$movies_on_all_services <- (streaming_data$Netflix == 1 & streamin
 number_on_all_services <- table(streaming_data$movies_on_all_services)["TRUE"]
 print(paste0("There are ", number_on_all_services, " movies that are on all streaming platforms excluding Disney plus"))
 
-streaming_data$rating_difference <- streaming_data$Rotten.Tomatoes - streaming_data$Rotten.Tomatoes
+streaming_data$rating_difference <- as.numeric(na.omit(streaming_data$Rotten.Tomatoes)) - as.numeric(na.omit(streaming_data$Rotten.Tomatoes))
 
 
 streaming_data$IMDb_numeric_100 <- c(str_sub(streaming_data$IMDb, 1,3))
@@ -53,16 +52,15 @@ least_difference_movie_name <- tail(names(sort(table(streaming_data$Title[stream
 least_difference_movie_name
 print(paste0("The Movie ", least_difference_movie_name, " is tied for the lowest difference between IMDb and Rotten Tomatoes with the difference being 0" ))
 
-answer_list <- function(){
-print(paste0("There are ", num_observations, " movies in this dataset and the most number of movies in a country is the "
-             , most_movies_location, " with ", most_movies_location_number, " movies."))
-print(paste0("The least number of movies in a country is the "
-             , least_movies_location, " with ", least_movies_location_number, " movies."))
-print(paste0("The year with the most number of movies is "
-             , most_movies_year, " with ", most_movies_year_number, " movies."))
-print(paste0("The year with the least number of movies is "
-             , least_movies_year, " with ", least_movies_year_number, " movies."))
-print(paste0("There are ", number_on_all_services, " movies that are on all streaming platforms excluding Disney plus"))
-print(paste0("The Movie ", most_difference_movie_name, " has the highest difference between IMDb and Rotten Tomatoes with the difference being 52" ))
-print(paste0("The Movie ", least_difference_movie_name, " is tied for the lowest difference between IMDb and Rotten Tomatoes with the difference being 0" ))
+answer <- c(
+    paste0("There are ", num_observations, " movies in this dataset and the most number of movies in a country is the ", most_movies_location, " with ", most_movies_location_number, " movies."), 
+    paste0("The least number of movies in a country is the ", least_movies_location, " with ", least_movies_location_number, " movies."), 
+    paste0("The year with the most number of movies is ", most_movies_year, " with ", most_movies_year_number, " movies."), 
+    paste0("The year with the least number of movies is ", least_movies_year, " with ", least_movies_year_number, " movies."), 
+    paste0("There are ", number_on_all_services, " movies that are on all streaming platforms excluding Disney plus"), 
+    paste0("The Movie ", most_difference_movie_name, " has the highest difference between IMDb and Rotten Tomatoes with the difference being 52" ), 
+    paste0("The Movie ", least_difference_movie_name, " is tied for the lowest difference between IMDb and Rotten Tomatoes with the difference being 0" ))
+
+answer_list <- function(){ 
+  cat(answer,sep="\n")
 }

@@ -85,16 +85,17 @@ Hulu_rotten <- data_df %>%
 ## this is a dumb way doing it, but sorta ran out of time
 arranging = data.frame(
   platform = c('Netflix', 'Netflix', 'Netflix', 'Prime', 'Prime', 'Prime','Hulu', 'Hulu', 'Hulu'),
-  ratings = c('Certified.Fresh','Fresh','Rotten','Certified.Fresh','Fresh','Rotten','Certified.Fresh','Fresh','Rotten'),
+  ratings = c('Certified Fresh','Fresh','Rotten','Certified Fresh','Fresh','Rotten','Certified Fresh','Fresh','Rotten'),
   numbers = c(Netflix_certifiedFresh, Netflix_fresh, Netflix_rotten, 
               Prime_certifiedFresh, Prime_fresh, Prime_rotten,
               Hulu_certifiedFresh, Hulu_fresh, Hulu_rotten)
 )
 
-ggplot(arranging, aes(x =ratings, y = numbers, fill = platform))+
-  geom_bar(stat = 'identity', position = 'dodge')+
-  labs(title = "Rotten Tomato Rating Distribution from each service")
-
+create_chart_1 <- function(){
+  ggplot(arranging, aes(x =ratings, y = numbers, fill = platform))+
+    geom_bar(stat = 'identity', position = 'dodge')+
+    labs(title = "Rotten Tomato Rating Distribution from each service", x = "Ratings", y = "Number of Movies")
+}
 
 
 

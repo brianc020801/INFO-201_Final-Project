@@ -54,3 +54,7 @@ data_disney_df <- data_df %>%
 
 #Joins the 4 rows together into one table
 data_movies_df <- full_join(data_netflix_df, full_join(data_amazon_df, full_join(data_hulu_df, data_disney_df)))
+
+create_table <- function(){
+  kable(data_movies_df, col.names = c("Provider", "Total Movies", "Average IMDb Rating (/10)", "Average Rotten Tomatoes Rating (%)", "Average Runtime (min)"))
+}
