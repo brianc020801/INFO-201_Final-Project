@@ -90,7 +90,8 @@ ui <- shinyUI(navbarPage(
               label = h3("Year"),
               min = 1941,
               max = 2021,
-              value = c(1941, 2021)
+              value = c(1941, 2021), 
+              sep = ""
             ),
             radioButtons(
               "service",
@@ -118,12 +119,11 @@ ui <- shinyUI(navbarPage(
                    "language", label = h3("Language"), value = "English"
                  )),
                  mainPanel(plotOutput("languageRatePlot"))
-               )),
-      tags$img(
-        src = "https://mycroft.ai/wp-content/uploads/2018/05/languages-edited.png",
-        height = "70%",
-        width = "70%"
-      )
+               ), tags$img(
+                 src = "https://mycroft.ai/wp-content/uploads/2018/05/languages-edited.png",
+                 height = "70%",
+                 width = "70%"
+               ))
     )
   ),
   tabPanel("Summary", 
@@ -189,7 +189,7 @@ server <- function(input, output) {
   })
   
   output$ageRatePlot <- renderPlot({
-    ggplot(data2(), aes(x = Age, y = AvgRating, fill = Age)) + geom_bar(stat = "identity") + xlab("Year") + ylab("Average IMDb Rating")
+    ggplot(data2(), aes(x = Age, y = AvgRating, fill = Age)) + geom_bar(stat = "identity") + xlab("Recommended Age") + ylab("Average IMDb Rating")
   })
   
   data3 <- reactive({
