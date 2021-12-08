@@ -41,78 +41,77 @@ ui <- shinyUI(navbarPage(
       width = "90%"
     )
   ),
-  tabPanel(
-    "Interactives",
-    tabsetPanel(
-      tabPanel(
-        "Age vs Rating",
-        sidebarLayout(
-          sidebarPanel(
-            selectInput(
-              "age",
-              label = h3("Age Rating 1"),
-              choices = movieData$Age
-            ),
-            selectInput(
-              "age2",
-              label = h3("Age Rating 2"),
-              choices = movieData$Age
-            )
-          ),
-          
-          mainPanel(plotOutput("ageRatePlot"))
-        ),
-        tags$img(
-          src = "https://www.mmobomb.com/file/2018/02/ESRB-ratings.jpg",
-          height = "70%",
-          width = "70%"
-        )
-      ),
-      tabPanel(
-        "Year vs Rating",
-        sidebarLayout(
-          sidebarPanel(
-            sliderInput(
-              "year",
-              label = h3("Year"),
-              min = 1941,
-              max = 2021,
-              value = c(1941, 2021)
-            ),
-            radioButtons(
-              "service",
-              label = h3("Services"),
-              choices = list(
-                "Netlix" = 1,
-                "Hulu" = 2,
-                "Amazon" = 3,
-                "Disney+" = 4
-              ),
-              selected = 1
-            )
-          ),
-          mainPanel(plotOutput("yearRatePlot"))
-        ),
-        tags$img(
-          src = "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg",
-          height = "70%",
-          width = "70%"
-        )
-      ),
-      tabPanel("Language vs Rating",
+  tabPanel("Interactives",
+           tabsetPanel(
+             tabPanel(
+               "Age vs Rating",
                sidebarLayout(
-                 sidebarPanel(textInput(
-                   "language", label = h3("Language"), value = "English"
-                 )),
-                 mainPanel(plotOutput("languageRatePlot"))
-               )),
-      tags$img(
-        src = "https://mycroft.ai/wp-content/uploads/2018/05/languages-edited.png",
-        height = "70%",
-        width = "70%"
-      )
-    )
-  ),
+                 sidebarPanel(
+                   selectInput(
+                     "age",
+                     label = h3("Age Rating 1"),
+                     choices = movieData$Age
+                   ),
+                   selectInput(
+                     "age2",
+                     label = h3("Age Rating 2"),
+                     choices = movieData$Age
+                   )
+                 ),
+                 
+                 mainPanel(plotOutput("ageRatePlot"))
+               ),
+               tags$img(
+                 src = "https://www.mmobomb.com/file/2018/02/ESRB-ratings.jpg",
+                 height = "70%",
+                 width = "70%"
+               )
+             ),
+             tabPanel(
+               "Year vs Rating",
+               sidebarLayout(
+                 sidebarPanel(
+                   sliderInput(
+                     "year",
+                     label = h3("Year"),
+                     min = 1941,
+                     max = 2021,
+                     value = c(1941, 2021)
+                   ),
+                   radioButtons(
+                     "service",
+                     label = h3("Services"),
+                     choices = list(
+                       "Netlix" = 1,
+                       "Hulu" = 2,
+                       "Amazon" = 3,
+                       "Disney+" = 4
+                     ),
+                     selected = 1
+                   )
+                 ),
+                 mainPanel(plotOutput("yearRatePlot"))
+               ),
+               tags$img(
+                 src = "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg",
+                 height = "70%",
+                 width = "70%"
+               )
+             ),
+             tabPanel(
+               "Language vs Rating",
+               sidebarLayout(sidebarPanel(
+                 textInput("language", label = h3("Language"), value = "English")
+               ),
+               mainPanel(plotOutput("languageRatePlot"))),
+               tags$img(
+                 src = "https://mycroft.ai/wp-content/uploads/2018/05/languages-edited.png",
+                 height = "70%",
+                 width = "70%"
+               )
+             )
+             
+           )),
   tabPanel("Summary", tableOutput("table"))
 ))
 server <- function(input, output) {
