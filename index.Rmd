@@ -38,18 +38,26 @@ create_table()
 ```
 
 ### Charts
-
 ```{r echo = FALSE}
 create_chart_1()
 ```
+
+- The purpose of this chart is to see the movies each streaming services pick based on RottenTomatoes Rating
+The x axis is the ratings where according the the official website, Rotten means less than 59, Fresh mean above 60, and Certified Fresh means above 75
+- Observation: we can see that from the chart, if we apply the word 
+“quality control” in this situation, overall, contents of movies on Hulu on average have better quality than the other two streaming services. Also, more than half of the movies on both Netflix and Prime are below 60/100.
 
 
 ```{r echo = FALSE}
 create_chart_2()
 ```
 
+- The purpose of this chart is to show the years of the movies on each streaming services
+- Observation: all three of them are doing a good job adding new movies
 
 ```{r echo = FALSE}
 create_chart_3()
 ```
 
+- The purpose of this chart is to show the amount of movies on each streaming services
+- Observation: if you like to watch movies, you can choose Netflix or Prime videos instead of Hulu or Disney plus
